@@ -15,7 +15,7 @@ steps:
     id: 'Push Docker image'
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v2.0']
 
-  # Step 4: Apply the production deployment YAML file to the production namespace
+  # Step 4: Apply the production deployment YAML file to the production namespace 
   - name: 'gcr.io/cloud-builders/kubectl'
     id: 'Deploy'
     args: ['-n', 'prod', 'apply', '-f', 'prod/deployment.yaml']
